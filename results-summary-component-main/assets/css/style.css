@@ -2,20 +2,27 @@
 
 :root {
   /* Primary Colors*/
-  --Light-red: hsl(0, 100%, 67%);
-  --Orangey-yellow: hsl(39, 100%, 56%);
-  --Green-teal: hsl(166, 100%, 37%);
-  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-red: hsla(0, 100%, 67%);
+  --Light-red-bg: hsla(0, 80%, 75%);
+
+  --Orangey-yellow: hsla(39, 100%, 56%);
+  --light-orangey-bg: hsla(43, 83%, 72%);
+
+  --Green-teal: hsla(166, 100%, 37%);
+  --light-green-bg: hsla(162, 36%, 66%);
+
+  --Cobalt-blue: hsla(234, 85%, 45%);
+  --light-cobalt-bg: hsla(231, 61%, 74%);
 
   /* Neutral Colors */
-  --White: hsl(0, 0%, 100%);
-  --Pale-blue: hsl(221, 100%, 96%);
-  --Light-lavender: hsl(241, 100%, 89%);
-  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --White: hsla(0, 0%, 100%);
+  --Pale-blue: hsla(221, 100%, 96%);
+  --Light-lavender: hsla(241, 100%, 89%);
+  --Dark-gray-blue: hsla(224, 30%, 27%);
 
   /* Gradient Colors */
-  --Light-slate-blue: hsl(252, 100%, 67%);
-  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Light-slate-blue: hsla(252, 100%, 67%);
+  --Light-royal-blue: hsla(241, 81%, 54%);
 
   /* Circle Colors */
   --Violet-blue: hsla(256, 72%, 46%, 1);
@@ -29,6 +36,44 @@
   list-style: none;
   text-decoration: none;
   font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  transition: linear .9s;
+}
+
+.f-red {
+  color: var(--Light-red);
+}
+
+.bg-red {
+  background: var(--Light-red-bg);
+}
+
+.f-yellow {
+  color: var(--Orangey-yellow);
+}
+
+.bg-yellow {
+  background: var(--light-orangey-bg);
+}
+
+.f-green {
+  color: var(--Green-teal);
+}
+
+.bg-green {
+  background: var(--light-green-bg);
+}
+
+.f-blue {
+  color: var(--Cobalt-blue);
+}
+
+.bg-blue {
+  background-color: var(--light-cobalt-bg);
+}
+
+.border {
+  border: 2px solid red;
 }
 
 .attribution {
@@ -37,4 +82,149 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  height: 100vh;
+  align-content: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+  box-shadow: rgba(0, 0, 0.10, 0.10) 0px 4px 24px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.content-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1.4rem;
+  width: 50%;
+  text-align: center;
+  background: linear-gradient(180deg, var(--Light-slate-blue) 0%, var(--Light-royal-blue) 100%);
+  color: var(--White);
+  border-radius: 20px;
+  gap: 1rem;
+}
+
+.content-result h1 {
+  color: var(--Light-lavender);
+}
+
+.content-result .score {
+  background: linear-gradient(0, var(--Persian-blue) 0, var(--Violet-blue) 100%);
+  margin: 0 25%;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.content-result .score h2 {
+  font-size: 3rem;
+}
+
+.content-result .score p {
+  color: var(--Light-lavender);
+  font-size: .7rem;
+}
+
+.content-result h3 {
+  font-size: 1.8rem;
+}
+
+.content-result .description {
+  font-size: .7rem;
+  width: 180px;
+  color: var(--Light-lavender);
+}
+
+.content-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem 1.8rem;
+  height: 100%;
+  width: 50%;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  gap: .5rem;
+}
+
+.summary-item ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem;
+  border-radius: .4rem;
+}
+
+.summary-item ul li:nth-child(1){
+  display: flex;
+}
+
+.item-score span {
+  color: var(--Dark-gray-blue);
+}
+
+.content-summary a {
+  width: 100%;
+  text-align: center;
+  background: var(--Dark-gray-blue);
+  color: var(--White);
+  padding: .4rem 0;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.content-summary a:hover {
+  background: linear-gradient(180deg, var(--Light-slate-blue) 0%, var(--Light-royal-blue) 100%);
+}
+
+@media (max-width: 376px) {
+  body {
+    max-width: 100vh;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .content-result {
+    height: 45%;
+    text-align: center;
+    background: linear-gradient(180deg, --Light-slate-blue() 0%, --Light-royal-blue() 35%);
+    width: 100%;
+  }
+
+  .content-summary {
+    height: 45%;
+    width: 100%;
+    gap: .4rem;
+  }
+
+  .attribution{
+    height: 5%;
+  }
 }
