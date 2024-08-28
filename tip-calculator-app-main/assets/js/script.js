@@ -40,11 +40,21 @@ function handleChange(event) {
         people.classList.add('active');
     } else {
         people.classList.remove('active');
-        tipamt = tiptotal.toFixed(2);
+        tipamt = `$${tiptotal.toFixed(2)}`;
         tipamount.value = tipamt;
 
         totalmt = totalAmt;
-        totalAmount.value = totalmt.toFixed(2);
+        totalAmount.value = `$${totalmt.toFixed(2)}`;
         console.log(totalmt)
     }
+}
+
+function resetForms() {
+
+    control.reset();
+    totalAmount.value = '';
+    tipamount.value = '';
+    const radios = control.querySelectorAll('input[type=radio]');
+    radios.forEach(radio => radio.checked = false);
+
 }

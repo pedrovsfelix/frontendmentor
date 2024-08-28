@@ -55,12 +55,12 @@
               
               <div class="card-item">
                 <input type="radio" name="percent" id="radio4" value="0.25">
-              <label for="radio4"><p>25%</p></label>
+                <label for="radio4"><p>25%</p></label>
               </div>
               
               <div class="card-item">
                 <input type="radio" name="percent" id="radio5" value="0.50">
-              <label for="radio5"><p>50%</p></label>
+                <label for="radio5"><p>50%</p></label>
               </div>
               
               <div class="card-item">
@@ -80,17 +80,17 @@
             <label for="tipamount">
               <p>Tip Amount</p><span>/ person</span>
             </label>
-            <input type="text" inputmode="numeric" pattern="\d*" id="tipamount"/>
+            <input type="text" inputmode="numeric" pattern="\d*" id="tipamount" placeholder="$0.00" readonly/>
           </div>
           
           <div class="flex">
             <label for="total">
               <p>Total</p><span>/ person</span>
             </label>
-            <input type="text" inputmode="numeric" pattern="\d*" name="total" id="total">
+              <input type="text" inputmode="numeric" pattern="\d*" name="total" id="total" placeholder="$0.00" readonly/>
           </div>
           
-          <button class="btn" type="reset">RESET</button>
+          <button class="btn" type="button" onclick="resetForms()">RESET</button>
         </div>
 
       </section>
