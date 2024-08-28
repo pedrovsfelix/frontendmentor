@@ -26,10 +26,56 @@
 
     <!-- CONTENT -->
      <main class="main">
-      <div class="content">
-        Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-        person Total / person Reset
-      </div>
+
+      <section class="container">
+
+        <div class="content">
+
+          <h2>Bill Select</h2>
+          <form action="" method="post" id="control">
+
+            <input type="text" inputmode="numeric" name="amaunt" id="amaunt">
+            <p>Select Tip %</p>
+
+            <input type="radio" name="percent" id="radio1">
+            <label for="radio1" value="0.05"><p>5%</p></label>
+
+            <input type="radio" name="percent" id="radio2">
+            <label for="radio2" value="0.10"><p>10%</p></label>
+
+            <input type="radio" name="percent" id="radio3">
+            <label for="radio3" value="0.15"><p>15%</p></label>
+
+            <input type="radio" name="percent" id="radio4">
+            <label for="radio4" value="0.25"><p>25%</p></label>
+
+            <input type="radio" name="percent" id="radio5">
+            <label for="radio5" value="0.50"><p>50%</p></label>
+
+            <input type="text" inputmode="numeric" name="percent" placeholder="Custom">
+
+            <p>Number of People</p>
+            <input type="number" name="people" id="people">
+          </form>
+
+        </div>
+
+        <div class="sidebar">
+          <label for="tipamount">
+            <p>Tip Amount</p><span>/ person</span>
+          </label>
+          <input type="text" inputmode="numeric" pattern="\d*" />
+
+          <label for="tipamount">
+            <p>Total</p><span>/ person</span>
+          </label>
+          <input type="text" name="tipamount" id="tipamount">
+
+          <button type="reset">RESET</button>
+        </div>
+
+      </section>
+
      </main>
 
     <div class="attribution">
