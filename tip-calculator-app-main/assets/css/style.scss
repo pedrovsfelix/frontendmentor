@@ -20,6 +20,32 @@
     --White: hsl(0, 0%, 100%);
 }
 
+body {
+    background: var(--Light-grayish-cyan);
+}
+
+.active {
+    border: 1px solid red;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-b {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .attribution {
   font-size: .68rem;
   text-align: center;
@@ -73,4 +99,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.4rem 1rem;
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    border-radius: .4rem;
+    cursor: pointer;
+    &:hover  {
+        background: var(--Light-grayish-cyan);
+    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        background: var(--Very-dark-cyan);
+        padding: .4rem 2rem;
+        color: var(--White);
+        border-radius: 5%;
+    }
+    input[type=radio]{
+        display: none;
+        
+    }
+    input:checked + label {
+        background: var(--Light-grayish-cyan);
+        color: var(--Very-dark-cyan);
+    }
 }

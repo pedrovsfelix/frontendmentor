@@ -19,15 +19,15 @@
   <body>
 
     <!-- SCREEN LOADING -->
-    <div class="screen-loading">
+    <!-- <div class="screen-loading">
       <div class="bar-loading">
       </div>
-    </div>
+    </div> -->
 
     <!-- CONTENT -->
      <main class="main">
 
-      <section class="container">
+      <section class="container flex-center">
 
         <div class="content">
 
@@ -37,41 +37,60 @@
             <input type="text" inputmode="numeric" name="amaunt" id="amaunt">
             <p>Select Tip %</p>
 
-            <input type="radio" name="percent" id="radio1">
-            <label for="radio1" value="0.05"><p>5%</p></label>
-
-            <input type="radio" name="percent" id="radio2">
-            <label for="radio2" value="0.10"><p>10%</p></label>
-
-            <input type="radio" name="percent" id="radio3">
-            <label for="radio3" value="0.15"><p>15%</p></label>
-
-            <input type="radio" name="percent" id="radio4">
-            <label for="radio4" value="0.25"><p>25%</p></label>
-
-            <input type="radio" name="percent" id="radio5">
-            <label for="radio5" value="0.50"><p>50%</p></label>
-
-            <input type="text" inputmode="numeric" name="percent" placeholder="Custom">
+            <div class="card-grid">
+              <div class="card-item">
+                <input type="radio" name="percent" id="radio1" value="0.05">
+                <label for="radio1"><p>5%</p></label>
+              </div>
+              
+              <div class="card-item">
+                <input type="radio" name="percent" id="radio2" value="0.10">
+                <label for="radio2"><p>10%</p></label>
+              </div>
+              
+              <div class="card-item">
+                <input type="radio" name="percent" id="radio3" value="0.15">
+                <label for="radio3">15%</label>
+              </div>
+              
+              <div class="card-item">
+                <input type="radio" name="percent" id="radio4" value="0.25">
+              <label for="radio4"><p>25%</p></label>
+              </div>
+              
+              <div class="card-item">
+                <input type="radio" name="percent" id="radio5" value="0.50">
+              <label for="radio5"><p>50%</p></label>
+              </div>
+              
+              <div class="card-item">
+                <input type="text" inputmode="numeric" name="percent" placeholder="Custom">
+              </div>
+            </div>
+                    
 
             <p>Number of People</p>
-            <input type="number" name="people" id="people">
+            <input type="text" inputmode="numeric" name="people" id="people" placeholder="0">
           </form>
 
         </div>
 
         <div class="sidebar">
-          <label for="tipamount">
-            <p>Tip Amount</p><span>/ person</span>
-          </label>
-          <input type="text" inputmode="numeric" pattern="\d*" />
-
-          <label for="tipamount">
-            <p>Total</p><span>/ person</span>
-          </label>
-          <input type="text" name="tipamount" id="tipamount">
-
-          <button type="reset">RESET</button>
+          <div class="flex">
+            <label for="tipamount">
+              <p>Tip Amount</p><span>/ person</span>
+            </label>
+            <input type="text" inputmode="numeric" pattern="\d*" id="tipamount"/>
+          </div>
+          
+          <div class="flex">
+            <label for="total">
+              <p>Total</p><span>/ person</span>
+            </label>
+            <input type="text" inputmode="numeric" pattern="\d*" name="total" id="total">
+          </div>
+          
+          <button class="btn" type="reset">RESET</button>
         </div>
 
       </section>
