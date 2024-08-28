@@ -27,6 +27,8 @@
     <!-- CONTENT -->
      <main class="main">
 
+      <h1>SPLI<br>TTER</h1>
+
       <section class="container flex-center">
 
         <div class="content">
@@ -75,19 +77,19 @@
 
         </div>
 
-        <div class="sidebar">
+        <div class="sidebar flex-b">
           <div class="flex">
             <label for="tipamount">
               <p>Tip Amount</p><span>/ person</span>
             </label>
-            <input type="text" inputmode="numeric" pattern="\d*" id="tipamount" placeholder="$0.00" readonly/>
+            <input class="flex-2" type="text" inputmode="numeric" pattern="\d*" id="tipamount" placeholder="$0.00" readonly/>
           </div>
           
           <div class="flex">
             <label for="total">
               <p>Total</p><span>/ person</span>
             </label>
-              <input type="text" inputmode="numeric" pattern="\d*" name="total" id="total" placeholder="$0.00" readonly/>
+              <input class="flex-2"type="text" inputmode="numeric" pattern="\d*" name="total" id="total" placeholder="$0.00" readonly/>
           </div>
           
           <button class="btn" type="button" onclick="resetForms()">RESET</button>
