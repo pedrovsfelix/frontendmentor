@@ -26,13 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    h1 {
-        text-align: center;
-        color: var(--Very-dark-cyan);
-        font-size: 1.7rem;
-        letter-spacing: .4rem;
-    }
+    margin: 0 auto;
 }
 
 .active {
@@ -127,19 +121,39 @@ body {
     max-width: 720px;
     margin: 0 auto;
     background-color: var(--White);
-    border-radius: .4rem;
-    padding: 1rem 1.7rem;
+    border-radius: 1.2rem;
+    padding: 1rem;
 }
 
 .content {
     flex: 1;
+    h2, p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input[type=text] {
+        width: 100%;
+        text-align: right;
+        padding: .4rem;
+        font-weight: bold;
+    }
+
 }
 
 .btn {
     width: 100%;
-    padding: 1.4rem 1rem;
+    padding: .8rem 1rem;
     background: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
+    font-weight: bold;
+    font-size: 1rem;
     border-radius: .4rem;
     border: none;
     cursor: pointer;
@@ -203,7 +217,7 @@ body {
     flex: 1;
     margin: .8rem;
     padding: 2rem;
-    border-radius: .4rem;
+    border-radius: 1.2rem;
 }
 
 #tipamount, #total {
@@ -217,5 +231,6 @@ body {
     flex: 2;
     &::placeholder {
         color: var(--Strong-cyan);
+        font-weight: bold;
     }
 }

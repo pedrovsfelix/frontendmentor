@@ -17,87 +17,124 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-
-    <!-- SCREEN LOADING -->
+    <!-- SCREEN LOADING
     <div class="screen-loading">
       <div class="bar-loading">
       </div>
-    </div>
+    </div> -->
 
     <!-- CONTENT -->
-     <main class="main">
-
-      <h1>SPLI<br>TTER</h1>
+    <main class="main">
+      <header class="header">
+        <img src="./assets/images/logo.svg" alt="logo" />
+      </header>
 
       <section class="container flex-center">
-
         <div class="content">
+          <form action="" class="forms" method="post" id="control">
+            <div class="content-1">
+              <h2>Bill</h2>
+              <input
+                type="text"
+                inputmode="numeric"
+                name="amaunt"
+                id="amaunt"
+                placeholder="0"
+              />
+            </div>
 
-          <h2>Bill Select</h2>
-          <form action="" method="post" id="control">
+            <div class="content-2">
+              <p>Select Tip %</p>
+              <div class="card-grid">
+                <div class="card-item">
+                  <input type="radio" name="percent" id="radio1" value="0.05" />
+                  <label for="radio1"><p>5%</p></label>
+                </div>
 
-            <input type="text" inputmode="numeric" name="amaunt" id="amaunt">
-            <p>Select Tip %</p>
+                <div class="card-item">
+                  <input type="radio" name="percent" id="radio2" value="0.10" />
+                  <label for="radio2"><p>10%</p></label>
+                </div>
 
-            <div class="card-grid">
-              <div class="card-item">
-                <input type="radio" name="percent" id="radio1" value="0.05">
-                <label for="radio1"><p>5%</p></label>
-              </div>
-              
-              <div class="card-item">
-                <input type="radio" name="percent" id="radio2" value="0.10">
-                <label for="radio2"><p>10%</p></label>
-              </div>
-              
-              <div class="card-item">
-                <input type="radio" name="percent" id="radio3" value="0.15">
-                <label for="radio3">15%</label>
-              </div>
-              
-              <div class="card-item">
-                <input type="radio" name="percent" id="radio4" value="0.25">
-                <label for="radio4"><p>25%</p></label>
-              </div>
-              
-              <div class="card-item">
-                <input type="radio" name="percent" id="radio5" value="0.50">
-                <label for="radio5"><p>50%</p></label>
-              </div>
-              
-              <div class="card-item">
-                <input type="text" inputmode="numeric" name="percent" placeholder="Custom">
+                <div class="card-item">
+                  <input type="radio" name="percent" id="radio3" value="0.15" />
+                  <label for="radio3">15%</label>
+                </div>
+
+                <div class="card-item">
+                  <input type="radio" name="percent" id="radio4" value="0.25" />
+                  <label for="radio4"><p>25%</p></label>
+                </div>
+
+                <div class="card-item">
+                  <input type="radio" name="percent" id="radio5" value="0.50" />
+                  <label for="radio5"><p>50%</p></label>
+                </div>
+
+                <div class="card-item">
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    name="percent"
+                    placeholder="Custom"
+                  />
+                </div>
               </div>
             </div>
-                    
 
-            <p>Number of People</p>
-            <input type="text" inputmode="numeric" name="people" id="people" placeholder="0">
+            <div class="content-3">
+              <p>Number of People</p>
+              <input
+                type="text"
+                inputmode="numeric"
+                name="people"
+                id="people"
+                placeholder="0"
+              />
+            </div>
           </form>
-
         </div>
 
         <div class="sidebar flex-b">
           <div class="flex">
             <label for="tipamount">
-              <p>Tip Amount</p><span>/ person</span>
+              <p>Tip Amount</p>
+              <span>/ person</span>
             </label>
-            <input class="flex-2" type="text" inputmode="numeric" pattern="\d*" id="tipamount" placeholder="$0.00" readonly/>
+            <input
+              class="flex-2"
+              type="text"
+              inputmode="numeric"
+              pattern="\d*"
+              id="tipamount"
+              placeholder="$0.00"
+              readonly
+            />
           </div>
-          
+
           <div class="flex">
             <label for="total">
-              <p>Total</p><span>/ person</span>
+              <p>Total</p>
+              <span>/ person</span>
             </label>
-              <input class="flex-2"type="text" inputmode="numeric" pattern="\d*" name="total" id="total" placeholder="$0.00" readonly/>
+            <input
+              class="flex-2"
+              type="text"
+              inputmode="numeric"
+              pattern="\d*"
+              name="total"
+              id="total"
+              placeholder="$0.00"
+              readonly
+            />
           </div>
-          
-          <button class="btn" type="button" onclick="resetForms()">RESET</button>
+
+          <button class="btn" type="button" onclick="resetForms()">
+            RESET
+          </button>
         </div>
-
       </section>
-
-     </main>
+    </main>
 
     <div class="attribution">
       Challenge by

@@ -3,6 +3,7 @@ const amount = document.getElementById('amaunt');
 const tipamount = document.getElementById('tipamount');
 const people = document.getElementById('people');
 const totalAmount = document.getElementById('total');
+const radios = control.querySelectorAll('input[type=radio]');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,6 @@ function resetForms() {
     control.reset();
     totalAmount.value = '';
     tipamount.value = '';
-    const radios = control.querySelectorAll('input[type=radio]');
     radios.forEach(radio => radio.checked = false);
 
 }
