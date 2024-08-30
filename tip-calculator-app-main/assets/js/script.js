@@ -4,6 +4,7 @@ const tipamount = document.getElementById('tipamount');
 const people = document.getElementById('people');
 const totalAmount = document.getElementById('total');
 const radios = control.querySelectorAll('input[type=radio]');
+const custom = document.getElementById('custom')
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +40,20 @@ function handleChange(event) {
 
     if(people.value == "") {
         people.classList.add('active');
-    } else {
+    } else if(custom.value >= 1) {
+      
+      people.classList.remove('active');
+      radios.forEach(radio => radio.checked = false);
+      rate = parseFloat(bill * (custom.value / 100));
+      tipamt = `$${rate}`;
+      tipamount.value = tipamt;
+
+      totalmt = totalAmt;
+      totalAmount.value = `$${totalmt.toFixed(2)}`;
+
+    }
+     else {
+        custom.value = '';
         people.classList.remove('active');
         tipamt = `$${tiptotal.toFixed(2)}`;
         tipamount.value = tipamt;
